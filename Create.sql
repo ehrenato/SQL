@@ -1,19 +1,19 @@
 create table Produtos (
-  Codigo int,
-  Nome varchar(100),
-  Descricao varchar(300),
-  Preco float
+  Codigo int identity(1,1) not null PRIMARY KEY,
+  Nome varchar(100) not null,
+  Descricao varchar(300) not null,
+  Preco float not null
 )
 
 create table Clientes (
-  Codigo int not null,
+  Codigo int identity(1,1) not null PRIMARY KEY,
   Nome varchar(200) not null,
   TipoPessoa char(1) not null
   
 )
 
 create table Pedido (
-	Codigo int not null,
+	Codigo int identity(1,1) not null PRIMARY KEY,
 	DataSolicitacao datetime not null,
 	Pago bit not null,
 	TotalPedido float not null,
