@@ -17,7 +17,9 @@ create table Pedido (
 	DataSolicitacao datetime not null,
 	Pago bit not null,
 	TotalPedido float not null,
-	CodigoCliente int not null
+	CodigoCliente int not null,
+	CodigoStatus int not null,
+	DescricaoStatus varchar(50)
 )
 
 create table PedidoItem (
