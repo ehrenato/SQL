@@ -22,8 +22,8 @@ create table Pedido (
 )
 
 create table PedidoItem (
-	CodigoPedido int not null,
-	CodigoProduto int not null,
+	CodigoPedido int not null PRIMARY KEY,
+	CodigoProduto int not null PRIMARY KEY,
 	Preco float not null,
 	Quantidade int not null
 )
@@ -31,4 +31,16 @@ create table PedidoItem (
 create table Status (
 	Codigo int not null identity(1,1) PRIMARY KEY,
 	Descricao varchar(50) not null
+)
+
+create table StatusPedidoItem (
+	Codigo int not null identity(1,1) PRIMARY KEY,
+	Descricao varchar(50) not null
+)
+
+create table PedidoItemLog (
+	CodigoPedido int not null,
+	CodigoProduto int not null,
+	CodigoStatus int not null,
+	DataMovimento datetime not null
 )

@@ -19,3 +19,7 @@ references Pedido(Codigo) /*transforma a coluna CodigoPedido em FK*/
 alter table Pedido
 add DescricaoStatus int not null
 
+
+ALTER TABLE PedidoItemLog ALTER COLUMN CodigoStatus TO  'CodigoStatusPedidoItem';
+
+sp_RENAME '[PedidoItemLog.CodigoStatus]', '[CodigoStatusPedidoItem]' , 'COLUMN'
